@@ -31,7 +31,7 @@ sudo bash < <(curl -Ls https://raw.githubusercontent.com/RManLuo/crack-soga-v2ra
 ```
 # 拉取镜像
 docker pull rmanluo/crack-soga
-# 运行镜像，参数请参考soga自带教程。
+# 运行镜像，参数请参考soga自带教程。docker run --restart=always --add-host=soga.sprov.xyz:127.0.0.1
 docker run --restart=always --name crack-soga -d -v /etc/soga/:/etc/soga/ --network host rmanluo/crack-soga \
 --type=sspanel-uim \
 --server_type=v2ray \

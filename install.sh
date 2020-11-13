@@ -1,6 +1,5 @@
 #!/bin/bash
-echo '127.0.0.1       soga.sprov.xyz' | sudo tee -a /etc/hosts
-echo '127.0.0.1       doc.sprov.xyz' | sudo tee -a /etc/hosts
+
 red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'
@@ -98,6 +97,8 @@ install_soga() {
             exit 1
         fi
         echo -e "检测到 soga 最新版本：${last_version}，开始安装"
+		echo '127.0.0.1       soga.sprov.xyz' | sudo tee -a /etc/hosts
+		echo '127.0.0.1       doc.sprov.xyz' | sudo tee -a /etc/hosts
         wget -N --no-check-certificate -O /usr/local/soga.tar.gz https://github.com/mooyun/ssogga/releases/download/${last_version}/soga-cracked-linux64.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}下载 soga 失败，请确保你的服务器能够下载 Github 的文件${plain}"

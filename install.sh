@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo '127.0.0.1       soga.sprov.xyz' | sudo tee -a /etc/hosts
+echo '127.0.0.1       doc.sprov.xyz' | sudo tee -a /etc/hosts
 red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'

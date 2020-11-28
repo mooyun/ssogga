@@ -7,7 +7,7 @@ plain='\033[0m'
 
 version="v1.0.0"
 
-# check root
+# check root for mooyun
 [[ $EUID -ne 0 ]] && echo -e "${red}错误: ${plain} 必须使用root用户运行此脚本！\n" && exit 1
 
 # check os
